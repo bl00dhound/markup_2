@@ -186,6 +186,7 @@ ul {
   }
 
   .side_menu {
+    min-width: 25%;
     height: 100%;
     width: 25%;
 
@@ -224,6 +225,18 @@ ul {
   }
 
   .articles {
+    text-align: justify;
+    padding-left: 60px;
+    padding-right: 60px;
+    .link {
+      color: $main_text_hover;
+      text-align: left;
+
+      &:hover {
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
 
   }
 

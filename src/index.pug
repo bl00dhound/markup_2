@@ -37,7 +37,7 @@ html
                 a.anchor(name='main_content')
                 #currencies.currencies
                     .currencies_item
-                        input#dollar(type='radio' name='item')
+                        input#dollar(type='radio' name='item' checked='checked')
                         label(for='dollar').item_title
                             | Dollar
                             .fa.fa-dollar.fa-lg
@@ -67,13 +67,33 @@ html
                             | Bitcoin
                             .fa.fa-bitcoin.fa-lg
 
-
-
-            article.articles
-                h3
+            article#article.articles
+                h2.title Dollar
+                a.link(href='https://en.wikipedia.org/wiki/Dollar' target='_blank') Wikipedia
+                .article
+                    p
+                        | On 15 January 1520, the Czech Kingdom of Bohemia began minting coins from silver mined locally
+                        | in Joachimsthal (Czech Jáchymov) and marked on reverse with the Czech lion. The coins were called
+                        | joachimsthaler, which became shortened in common usage to thaler or taler. The German name "Joachimsthal"
+                        | literally means "Joachim's valley" or "Joachim's dale". This name found its way into other languages:
+                        | Czech tolar, Hungarian tallér, Danish and Norwegian (rigs)daler, Swedish (riks)daler, Icelandic dalur, Dutch
+                        | (rijks)daalder or daler, Ethiopian ታላሪ ("talari"), Italian tallero, Greek τάλληρον, τάλιρο, tàlleron, tàliro,
+                        | Polish talar, Persian dare, as well as – via Dutch – into English as dollar.
+                    p
+                        | A later Dutch coin also depicting a lion was called the leeuwendaler or leeuwendaalder, literally 'lion daler'.
+                        | The Dutch Republic produced these coins to accommodate its booming international trade. The leeuwendaler circulated
+                        | throughout the Middle East and was imitated in several German and Italian cities. This coin was also popular in the
+                        | Dutch East Indies and in the Dutch New Netherland Colony (New York). It was in circulation throughout the Thirteen
+                        | Colonies during the 17th and early 18th centuries and was popularly known as "lion (or lyon) dollar". The
+                        | currencies of Romania and Bulgaria are, to this day, 'lion' (leu/leva). The modern American-English pronunciation
+                    p
+                        | Spanish pesos – having the same weight and shape – came to be known as Spanish dollars. By the mid-18th century, the
+                        | lion dollar had been replaced by Spanish dollar, the famous "pieces of eight", which were distributed widely in the Spanish colonies
+                        | in the New World and in the Philippines.
             footer.footer
 
 
 
 
         script(src='js/index.js')
+        script(src='js/storage.js')
