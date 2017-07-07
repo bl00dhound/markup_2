@@ -8,7 +8,6 @@ and (max-width : 480px) {
         margin-left: 10px;
         img {
           height: 40px;
-
         }
       }
       nav {
@@ -21,7 +20,6 @@ and (max-width : 480px) {
         margin-left: 5px;
         #search {
           width: 94%;
-
           &:focus {
             width: 94%;
           }
@@ -29,6 +27,17 @@ and (max-width : 480px) {
       }
       .hamburger {
         display: block;
+      }
+    }
+    .jumbotron {
+      width: 80%;
+      margin-top: 8vh;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 15px;
+      .jumbotron_btn {
+        padding: 12px auto;
+        width: 80%;
       }
     }
   }
@@ -44,7 +53,6 @@ and (max-width : 768px) {
         margin-left: 10px;
         img {
           height: 30px;
-
         }
       }
       nav {
@@ -54,7 +62,6 @@ and (max-width : 768px) {
         margin-right: 10px;
         #search {
           width: 180px;
-
           &:focus {
             width: 220px;
           }
@@ -63,6 +70,11 @@ and (max-width : 768px) {
       .hamburger {
         display: block;
       }
+    }
+    .jumbotron {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -74,19 +86,16 @@ and (max-width : 1200px) {
   .background {
     header {
       align-content: space-around;
-
       .logo {
         margin-left: 40px;
         img {
           height: 60px;
         }
       }
-
       nav {
         width: 100%;
         order: 2;
       }
-
       .input_wrapper {
         margin-right: 40px;
       }

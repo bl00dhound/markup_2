@@ -1,6 +1,9 @@
 @import "normalize";
 @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
+$text_color: #acb2bb;
+$hover_text_color: #ffffff;
+
 html {
   height: 100%;
 }
@@ -19,6 +22,7 @@ ul {
   min-height: 100%;
   background: url('../img/background.jpg') no-repeat center center;
   background-size: cover;
+  padding-bottom: 10vh;
 
   header {
     position: relative;
@@ -26,12 +30,10 @@ ul {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
     height: 150px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid white;
-
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);
       transition: background-color .3s ease-out;
@@ -52,16 +54,15 @@ ul {
         align-content: center;
 
         .navbar_item {
-          color: #ffffff;
+          color: $hover_text_color;
 
           a:hover {
-            border-bottom: 1px solid #ffffff;
+            border-bottom: 1px solid $hover_text_color;
             cursor: pointer;
           }
         }
       }
     }
-
     .input_wrapper {
       position: relative;
       margin-right: 80px;
@@ -72,9 +73,9 @@ ul {
         width: 140px;
         flex-basis: 140px;
         background: none;
-        border: 1px solid #acb2bb;
+        border: 1px solid $text_color;
         border-radius: 20px;
-        color: #ffffff;
+        color: $hover_text_color;
         font-family: 'Roboto', sans-serif;
         padding-left: 20px;
         font-style: italic;
@@ -95,7 +96,7 @@ ul {
 
         &:focus {
           outline: none;
-          border-color: #ffffff;
+          border-color: $hover_text_color;
           width: 200px;
           transition: width .3s ease-out;
         }
@@ -106,7 +107,7 @@ ul {
         position: absolute;
         height: 50px;
         width: 50px;
-        color: #acb2bb;
+        color: $text_color;
         padding: auto;
         right: 0;
         top: -9px;
@@ -114,28 +115,62 @@ ul {
 
         &:hover {
           cursor: pointer;
-          color: #ffffff;
+          color: $hover_text_color;
         }
         &:focus {
           outline: none;
         }
       }
-
     }
-
     .hamburger {
       display: none;
       .hamburger-box {
         .hamburger-inner {
-          background-color: #acb2bb;
+          background-color: $text_color;
           &:after,&:before {
-            background-color: #acb2bb;
+            background-color: $text_color;
           }
         }
+      }
+    }
+  }
+  .jumbotron {
+    margin-top: 14vh;
+    margin-left: 10vw;
+    width: 50%;
+    color: $hover_text_color;
+    border: 1px solid $text_color;
+    border-radius: 5px;
+    padding: 10px 30px;
+    transition: border .2s ease-out;
+
+    &:hover {
+      transition: border .2s ease-out;
+      border-color: $hover_text_color;
+    }
+
+    .jumbotron_title {
+
+    }
+    .jumbotron_text {
+
+    }
+    .jumbotron_btn {
+      text-align: center;
+      padding: 12px 30px;
+      display: inline-block;
+      border: 1px solid $text_color;
+      border-radius: 3px;
+      transition: background-color .2s ease-out;
+
+
+      &:hover {
+        cursor:pointer;
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: background-color .2s ease-out;
 
       }
     }
-
   }
 }
 
