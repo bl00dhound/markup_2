@@ -27,42 +27,59 @@ html
                         .hamburger-inner
             .jumbotron
                 h1
-                    | Hello, everyone!
+                    | About currency
                 p
-                    | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                a(href='#main_content').jumbotron_btn
-                    | Press me!
+                    |A currency (from Middle English: curraunt, "in circulation", from Latin: currens, -entis) in the most specific
+                    | use of the word refers to money in any form when in actual use or circulation as a medium of exchange, especially
+                    |circulating banknotes and coins.[1][2] A more general definition is that a currency is a system of money (monetary units) in
+                    |common use, especially in a nation.[3] Under this definition, US dollars, British pounds, Australian dollars, and European euros
+                    | are examples of currency. These various currencies are recognized stores of value and are traded between nations in foreign exchange
+                    |markets, which determine the relative values of the different currencies.[4] Currencies in this sense are defined by governments,
+                    |and each type has limited boundaries of acceptance.
+                a#more_btn.jumbotron_btn
+                    | Read more...
         main.main_content
             aside.side_menu
-                a.anchor(name='main_content')
                 #currencies.currencies
                     .currencies_item
-                        input#dollar(type='radio' name='item' checked='checked')
+                        input#dollar(type='radio' name='item' value='dollar' checked='checked')
+                        label(for='dollar').small_screen
+                            .fa.fa-dollar.fa-lg
                         label(for='dollar').item_title
                             | Dollar
                             .fa.fa-dollar.fa-lg
                     .currencies_item
-                        input#euro(type='radio' name='item')
+                        input#euro(type='radio' name='item' value='euro')
+                        label(for='euro').small_screen
+                            .fa.fa-euro.fa-lg
                         label(for='euro').item_title
                             | Euro
                             .fa.fa-euro.fa-lg
                     .currencies_item
-                        input#yen(type='radio' name='item')
+                        input#yen(type='radio' name='item' value='yen')
+                        label(for='yen').small_screen
+                            .fa.fa-yen.fa-lg
                         label(for='yen').item_title
                             | Yen
                             .fa.fa-yen.fa-lg
                     .currencies_item
-                        input#rupee(type='radio' name='item')
+                        input#rupee(type='radio' name='item' value='rupee')
+                        label(for='rupee').small_screen
+                            .fa.fa-rupee.fa-lg
                         label(for='rupee').item_title
                             | Rupee
                             .fa.fa-rupee.fa-lg
                     .currencies_item
-                        input#sheqel(type='radio' name='item')
+                        input#sheqel(type='radio' name='item' value='sheqel')
+                        label(for='sheqel').small_screen
+                            .fa.fa-sheqel.fa-lg
                         label(for='sheqel').item_title
                             | Sheqel
                             .fa.fa-sheqel.fa-lg
                     .currencies_item
-                        input#bitcoin(type='radio' name='item')
+                        input#bitcoin(type='radio' name='item' value='bitcoin')
+                        label(for='bitcoin').small_screen
+                            .fa.fa-bitcoin.fa-lg
                         label(for='bitcoin').item_title
                             | Bitcoin
                             .fa.fa-bitcoin.fa-lg
@@ -70,7 +87,7 @@ html
             article#article.articles
                 h2.title Dollar
                 a.link(href='https://en.wikipedia.org/wiki/Dollar' target='_blank') Wikipedia
-                .article
+                .text
                     p
                         | On 15 January 1520, the Czech Kingdom of Bohemia began minting coins from silver mined locally
                         | in Joachimsthal (Czech Jáchymov) and marked on reverse with the Czech lion. The coins were called
@@ -94,6 +111,5 @@ html
 
 
 
-
-        script(src='js/index.js')
         script(src='js/storage.js')
+        script(src='js/index.js')

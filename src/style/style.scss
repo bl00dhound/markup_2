@@ -159,6 +159,7 @@ ul {
     .jumbotron_btn {
       text-align: center;
       padding: 12px 30px;
+      margin-bottom: 20px;
       display: inline-block;
       border: 1px solid $text_color;
       border-radius: 3px;
@@ -179,35 +180,38 @@ ul {
   display: flex;
   justify-content: space-between;
 
-  .anchor {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
-
   .side_menu {
     min-width: 25%;
     height: 100%;
-    width: 25%;
 
     .currencies {
       padding-top: 50px;
-      border: 1px solid red;
 
       .currencies_item {
-
         input[type='radio'] {
           display: none;
         }
-
-        input[type='radio']:checked + .item_title {
+        input[type='radio']:checked + .small_screen + .item_title {
           border-right: 2px solid $main_text_hover;
           padding-right: 18px;
           color: $main_text_hover;
           font-weight: 600;
           transition: color .4s linear;
         }
+        input[type='radio']:checked + .small_screen {
+          border-right: 2px solid $main_text_hover;
+          color: $main_text_hover;
+          transition: color .4s linear;
+        }
 
+        .small_screen {
+          display: none;
+          transition: color .4s linear;
+          &:hover {
+            cursor: pointer;
+
+          }
+        }
         .item_title {
           display: block;
           text-align: right;
@@ -231,19 +235,24 @@ ul {
     .link {
       color: $main_text_hover;
       text-align: left;
-
       &:hover {
         font-weight: 600;
         cursor: pointer;
       }
     }
-
+    .text {
+      animation: appearance .8s;
+    }
   }
-
   .footer {
 
   }
+}
 
+
+@keyframes  appearance {
+  from { opacity: .1;}
+  to { opacity: 1;}
 }
 
 @import 'media';
