@@ -3,6 +3,9 @@
 
 $text_color: #acb2bb;
 $hover_text_color: #ffffff;
+$main_background: #f1efe5;
+$main_text_color: #455a64;
+$main_text_hover: #0548ba;
 
 html {
   height: 100%;
@@ -12,6 +15,12 @@ body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+}
+a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: $hover_text_color;
+
 }
 ul {
   list-style-type: none;
@@ -143,17 +152,9 @@ ul {
     border-radius: 5px;
     padding: 10px 30px;
     transition: border .2s ease-out;
-
     &:hover {
       transition: border .2s ease-out;
       border-color: $hover_text_color;
-    }
-
-    .jumbotron_title {
-
-    }
-    .jumbotron_text {
-
     }
     .jumbotron_btn {
       text-align: center;
@@ -162,16 +163,74 @@ ul {
       border: 1px solid $text_color;
       border-radius: 3px;
       transition: background-color .2s ease-out;
-
-
       &:hover {
         cursor:pointer;
         background-color: rgba(255, 255, 255, 0.3);
         transition: background-color .2s ease-out;
-
       }
     }
   }
+}
+
+.main_content {
+  color: $main_text_color;
+  background-color: $main_background;
+  min-height: 700px;
+  display: flex;
+  justify-content: space-between;
+
+  .anchor {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .side_menu {
+    height: 100%;
+    width: 25%;
+
+    .currencies {
+      padding-top: 50px;
+      border: 1px solid red;
+
+      .currencies_item {
+
+        input[type='radio'] {
+          display: none;
+        }
+
+        input[type='radio']:checked + .item_title {
+          border-right: 2px solid $main_text_hover;
+          padding-right: 18px;
+          color: $main_text_hover;
+          font-weight: 600;
+          transition: color .4s linear;
+        }
+
+        .item_title {
+          display: block;
+          text-align: right;
+          padding: 30px 20px;
+          transition: color .4s linear;
+          &:hover {
+            cursor: pointer;
+          }
+          .fa {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .articles {
+
+  }
+
+  .footer {
+
+  }
+
 }
 
 @import 'media';

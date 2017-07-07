@@ -26,12 +26,52 @@ html
                     .hamburger-box
                         .hamburger-inner
             .jumbotron
-                h1.jumbotron_title
+                h1
                     | Hello, everyone!
-                p.jumbotron_text
+                p
                     | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                .jumbotron_btn
+                a(href='#main_content').jumbotron_btn
                     | Press me!
+        main.main_content
+            aside.side_menu
+                a.anchor(name='main_content')
+                #currencies.currencies
+                    .currencies_item
+                        input#dollar(type='radio' name='item')
+                        label(for='dollar').item_title
+                            | Dollar
+                            .fa.fa-dollar.fa-lg
+                    .currencies_item
+                        input#euro(type='radio' name='item')
+                        label(for='euro').item_title
+                            | Euro
+                            .fa.fa-euro.fa-lg
+                    .currencies_item
+                        input#yen(type='radio' name='item')
+                        label(for='yen').item_title
+                            | Yen
+                            .fa.fa-yen.fa-lg
+                    .currencies_item
+                        input#rupee(type='radio' name='item')
+                        label(for='rupee').item_title
+                            | Rupee
+                            .fa.fa-rupee.fa-lg
+                    .currencies_item
+                        input#sheqel(type='radio' name='item')
+                        label(for='sheqel').item_title
+                            | Sheqel
+                            .fa.fa-sheqel.fa-lg
+                    .currencies_item
+                        input#bitcoin(type='radio' name='item')
+                        label(for='bitcoin').item_title
+                            | Bitcoin
+                            .fa.fa-bitcoin.fa-lg
+
+
+
+            article.articles
+                h3
+            footer.footer
 
 
 
