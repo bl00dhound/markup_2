@@ -3,6 +3,7 @@
   let hamburger = document.querySelector('.hamburger.hamburger--slider')
   let currencies = document.querySelectorAll('input[name="item"]')
   let moreBtn = document.querySelector('#more_btn')
+  let navbar = document.querySelector('#navbar')
   let article = document.querySelector('#article')
   let title = article.querySelector('h2.title')
   let link = article.querySelector('a.link')
@@ -41,6 +42,8 @@
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('is-active')
+    if (hamburger.classList.contains('is-active')) navbar.classList.add('show')
+    else navbar.classList.remove('show')
   })
 
 })()

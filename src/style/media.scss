@@ -10,9 +10,36 @@ and (max-width : 480px) {
           height: 40px;
         }
       }
-      nav {
-        display: none;
+      .navbar {
+        z-index: 200;
+        position:absolute;
+        top: -400px;
+        right: 0;
+        padding-top: 60px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: #0548ba;
+        margin-top: 0;
+        border: 2px solid #acb2bb;
+        opacity: .8;
+
+        &:hover {
+          opacity: .95;
+          border-color: #ffffff;
+        }
+        .navbar_item {
+          padding: 20px 30px;
+        }
       }
+      .show {
+        animation: moveup .6s;
+        animation-fill-mode: both;
+      }
+
+
       .input_wrapper {
         width: 98%;
         order: 2;
@@ -27,6 +54,7 @@ and (max-width : 480px) {
       }
       .hamburger {
         display: block;
+        z-index: 201;
       }
     }
     .jumbotron {
@@ -86,15 +114,42 @@ and (min-width : 481px)
 and (max-width : 768px) {
   .background {
     header {
+      position: relative;
       height: 80px;
+
       .logo {
         margin-left: 10px;
         img {
           height: 30px;
         }
       }
-      nav {
-        display: none;
+      .navbar {
+        z-index: 200;
+        position:absolute;
+        top: -400px;
+        right: 0;
+        padding-top: 60px;
+        display: flex;
+        width: 40%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: #0548ba;
+        margin-top: 0;
+        border: 2px solid #acb2bb;
+        opacity: .8;
+
+        &:hover {
+          opacity: .95;
+          border-color: #ffffff;
+        }
+        .navbar_item {
+          padding: 20px 30px;
+        }
+      }
+      .show {
+        animation: moveup .6s;
+        animation-fill-mode: both;
       }
       .input_wrapper {
         margin-right: 10px;
@@ -107,6 +162,7 @@ and (max-width : 768px) {
       }
       .hamburger {
         display: block;
+        z-index: 201;
       }
     }
     .jumbotron {
@@ -157,7 +213,7 @@ and (max-width : 1200px) {
           height: 60px;
         }
       }
-      nav {
+      .navbar {
         width: 100%;
         order: 2;
       }
@@ -174,7 +230,6 @@ and (max-width : 1200px) {
       }
     }
   }
-
 
 }
 

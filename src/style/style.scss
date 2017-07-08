@@ -55,20 +55,19 @@ ul {
         height: 80px;
       }
     }
-    nav {
+    .navbar {
       width: 42%;
-      .navbar {
-        display: flex;
-        justify-content: space-around;
-        align-content: center;
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
 
-        .navbar_item {
-          color: $hover_text_color;
+      .navbar_item {
+        font-weight: 600;
+        color: $hover_text_color;
 
-          a:hover {
-            border-bottom: 1px solid $hover_text_color;
-            cursor: pointer;
-          }
+        a:hover {
+          border-bottom: 1px solid $hover_text_color;
+          cursor: pointer;
         }
       }
     }
@@ -249,10 +248,17 @@ ul {
   }
 }
 
-
 @keyframes  appearance {
   from { opacity: .1;}
   to { opacity: 1;}
+}
+@keyframes moveup {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(400px);
+  }
 }
 
 @import 'media';
