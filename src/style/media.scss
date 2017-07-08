@@ -25,7 +25,6 @@ and (max-width : 480px) {
         margin-top: 0;
         border: 2px solid #acb2bb;
         opacity: .8;
-
         &:hover {
           opacity: .95;
           border-color: #ffffff;
@@ -71,7 +70,6 @@ and (max-width : 480px) {
   }
   .main_content {
     flex-wrap: wrap;
-
     .side_menu {
       min-width: 100%;
       .currencies {
@@ -105,6 +103,43 @@ and (max-width : 480px) {
     .articles {
       padding-left: 10px;
       padding-right: 10px;
+      flex-basis: 88vw;
+      .text {
+        font-size: 14px;
+      }
+    }
+    .footer {
+      flex-wrap: wrap;
+      font-size: 14px;
+      .footer_about {
+        width: 100%;
+        align-items: center;
+        margin-left: 0;
+      }
+      hr {
+        display: block;
+        color: white;
+        width: 90%;
+        opacity: .6;
+      }
+      img {
+        display: none;
+      }
+      .footer_nav {
+        margin-left: 0;
+        .social {
+          width: 100%;
+          justify-content: space-around;
+          .social_item {
+            margin-left: 0;
+          }
+        }
+      }
+      .footer_contacts {
+        align-items: center;
+        margin-right: 0;
+        margin-top: 0;
+      }
     }
   }
 }
@@ -171,7 +206,6 @@ and (max-width : 768px) {
       margin-right: auto;
     }
   }
-
   .main_content {
     .side_menu {
       min-width: 15%;
@@ -196,6 +230,34 @@ and (max-width : 768px) {
     .articles {
       padding-left: 20px;
       padding-right: 20px;
+      flex-basis: 72vw;
+    }
+    .footer {
+      flex-wrap: wrap;
+
+      .footer_about {
+        width: 100%;
+        align-items: center;
+      }
+      hr {
+        &:nth-of-type(1) {
+          display: block;
+          color: white;
+          width: 90%;
+          opacity: .6;
+        }
+      }
+      img {
+        display: none;
+      }
+      .footer_nav {
+        margin-left: 5%;
+      }
+      .footer_contacts {
+        align-items: flex-end;
+        margin-right: 5%;
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -230,6 +292,5 @@ and (max-width : 1200px) {
       }
     }
   }
-
 }
 
